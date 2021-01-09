@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Flask Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+        <script defer type ="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+        
+        
+    </head>
+    <body>
+        
+
+        <div id="chat-container">
+            <div id="message-list-container">
+            <!--
+                <div class="message-container">
+                    <h3 class="username">
+                        Vinizinho veneno
+                    </h3>
+                    <p class="user-message">
+                        Mesagem massa kkkk
+                    </p>
+                </div>
+            -->
+                
+            </div>
+            <div id="message-input-container">
+                <input type="text" id="input-user-message">
+                <button onClick="sendMessage()" id="btt-send-message" >
+                    <img src="{{ url_for('static', filename='imgs/send-icon.png')}}" alt="">
+
+                </button>
+            </div>
+        </div>
+
+        <div id="container-">
+            <label id="lbl-username">Username:</label>
+            <input type="text" id="input-username" placeholder="Your username" required>
+        </div>
+
+    </body>
+</html>
